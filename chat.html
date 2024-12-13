@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QuantumAI Chat</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    .chat-title {
+      position: absolute;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      margin: 0;
+      font-size: 2rem;
+      text-transform: uppercase;
+      color: var(--green-white);
+      font-weight: 700;
+      text-align: center;
+      z-index: 3;
+    }
+  </style>
+</head>
+<body>
+  <!-- We reduce the hero height so everything fits on one screen -->
+  <div id="large-header" class="large-header" style="height:40vh;">
+    <canvas id="demo-canvas"></canvas>
+    <h1 class="chat-title">Quantum AI Chat</h1>
+    <a href="index.html" class="home-button">Back to Home</a>
+  </div>
+
+  <!-- The chat container now fills remaining space, no scroll -->
+  <div class="chat-container">
+    <div class="messages-container" id="chatMessages">
+      <div class="typing-indicator" id="typingIndicator">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+    <form class="input-bar" id="chatForm">
+      <input type="text" id="chatInput" placeholder="Ask Quantum AI..." autocomplete="off" required />
+      <button type="submit" id="sendMsg">Send</button>
+    </form>
+  </div>
+
+  <!-- GSAP and EasePack for animation -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/TweenLite.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.3/easing/EasePack.min.js"></script>
+
+  <script>
+  (function() {
+    // Your quantum background code (omitted for brevity)
+    // Just ensure it's not too tall or adjust it as necessary
+  })();
+  </script>
+
+  <script src="chat.js"></script>
+</body>
+</html>
