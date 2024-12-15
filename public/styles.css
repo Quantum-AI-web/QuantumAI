@@ -43,20 +43,17 @@ html, body {
 }
 
 .main-title {
-  position: absolute;
   margin: 0;
   padding: 0;
   color: var(--green-white);
   text-align: center;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%,-50%);
   font-weight: 700;
   text-transform: uppercase;
-  font-size: 4.2em;
+  font-size: 3rem; /* Adjust font size if necessary */
   letter-spacing: 0.1em;
-  z-index: 3; /* Above canvas */
+  margin-bottom: 10px; /* Add some space between the title and the text below */
 }
+
 
 .thin {
   font-weight: 700;
@@ -112,15 +109,25 @@ html, body {
   color: var(--powder-blue);
 }
 
-.about, .footer {
+.about {
   background: var(--catalina-blue);
-  padding: 60px 20px; 
+  padding: 60px 0; /* Top/Bottom padding only */
   text-align: center;
+  width: 100%; /* Make the section span the entire width of the page */
 }
 
-.about h2, .footer p {
-  color: var(--green-white);
+.about-content {
+  max-width: 800px; /* Limit the text width for better readability */
+  margin: 0 auto; /* Center the text container */
+  padding: 0 20px; /* Add padding for smaller screens */
 }
+
+.about h2,
+.about p {
+  color: var(--green-white);
+  line-height: 1.6; /* Improve text readability */
+}
+
 
 .footer {
   margin-bottom: 40px;
@@ -274,4 +281,43 @@ html, body {
 
 .input-bar button:hover {
   background: var(--tacao);
+}
+
+/* Styling for the logos section */
+.logos-container {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.logo {
+  width: auto;
+  height: 50px;
+  margin: 0 15px;
+  vertical-align: middle;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+/* Hover animations for all applicable logos */
+.pump-fun-logo:hover,
+.telegram-logo:hover,
+.dex-screener-logo:hover,
+.x-logo:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+/* Specific styles for white logos */
+.dex-screener-logo,
+.x-logo {
+  filter: brightness(0) invert(1); /* Makes these logos white */
+}
+
+
+.coin-logo {
+  display: block;
+  margin: 20px auto 0; /* Center horizontally and add space above */
+  max-width: 150px; /* Limit the width of the logo */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 50%; /* Optional: Makes it circular */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Optional: Adds a subtle shadow */
 }
